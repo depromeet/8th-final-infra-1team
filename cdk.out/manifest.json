@@ -1,0 +1,363 @@
+{
+  "version": "6.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "WaniSampleRestApiStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "WaniSampleRestApiStack.template.json"
+      },
+      "metadata": {
+        "/WaniSampleRestApiStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.03c3b888bb37fa35bb43c35097eca2d96dc46414d3d13f05862662b0cd2c0308",
+              "id": "03c3b888bb37fa35bb43c35097eca2d96dc46414d3d13f05862662b0cd2c0308",
+              "packaging": "zip",
+              "sourceHash": "03c3b888bb37fa35bb43c35097eca2d96dc46414d3d13f05862662b0cd2c0308",
+              "s3BucketParameter": "AssetParameters03c3b888bb37fa35bb43c35097eca2d96dc46414d3d13f05862662b0cd2c0308S3Bucket0CBF156A",
+              "s3KeyParameter": "AssetParameters03c3b888bb37fa35bb43c35097eca2d96dc46414d3d13f05862662b0cd2c0308S3VersionKey59CA7029",
+              "artifactHashParameter": "AssetParameters03c3b888bb37fa35bb43c35097eca2d96dc46414d3d13f05862662b0cd2c0308ArtifactHash0CC96425"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/construct-compat.js:312:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:139:29)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:25)",
+              "RestApiStack.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack.js:367:33)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:66:31)",
+              "new Asset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/function.js:83:33)",
+              "new RestApiStack (/home/ubuntu/8th-final-infra-1team/infra-dist/restapi-stack.js:27:68)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:9:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/WaniSampleRestApiStack/SampleRestApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleRestApi4B782BA1",
+            "trace": [
+              "new RestApi (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:236:26)",
+              "new RestApiStack (/home/ubuntu/8th-final-infra-1team/infra-dist/restapi-stack.js:22:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:9:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/WaniSampleRestApiStack/SampleRestApi/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleRestApiCloudWatchRoleDB3E0CF4",
+            "trace": [
+              "new Role (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-iam/lib/role.js:45:22)",
+              "RestApi.configureCloudWatchRole (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:122:22)",
+              "new RestApi (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:252:18)",
+              "new RestApiStack (/home/ubuntu/8th-final-infra-1team/infra-dist/restapi-stack.js:22:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:9:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/WaniSampleRestApiStack/SampleRestApi/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleRestApiAccountA90F88CA",
+            "trace": [
+              "RestApi.configureCloudWatchRole (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:126:26)",
+              "new RestApi (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:252:18)",
+              "new RestApiStack (/home/ubuntu/8th-final-infra-1team/infra-dist/restapi-stack.js:22:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:9:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/WaniSampleRestApiStack/SampleRestApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleRestApiDeployment1C2AFA86a0fbbffc2f02ae41079e9ee54a3b1626",
+            "trace": [
+              "new Deployment (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/deployment.js:41:25)",
+              "RestApi.configureDeployment (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:134:38)",
+              "new RestApi (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:254:14)",
+              "new RestApiStack (/home/ubuntu/8th-final-infra-1team/infra-dist/restapi-stack.js:22:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:9:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/WaniSampleRestApiStack/SampleRestApi/DeploymentStage.dev/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleRestApiDeploymentStagedevB9B82960",
+            "trace": [
+              "new Stage (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/stage.js:50:26)",
+              "RestApi.configureDeployment (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:142:36)",
+              "new RestApi (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:254:14)",
+              "new RestApiStack (/home/ubuntu/8th-final-infra-1team/infra-dist/restapi-stack.js:22:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:9:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/WaniSampleRestApiStack/SampleRestApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleRestApiEndpoint7C3BED3C",
+            "trace": [
+              "RestApi.configureDeployment (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:146:13)",
+              "new RestApi (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:254:14)",
+              "new RestApiStack (/home/ubuntu/8th-final-infra-1team/infra-dist/restapi-stack.js:22:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:9:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/WaniSampleRestApiStack/SampleRestApi/Default/GET/ApiPermission.WaniSampleRestApiStackSampleRestApi7BFE3DD6.GET..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleRestApiGETApiPermissionWaniSampleRestApiStackSampleRestApi7BFE3DD6GET8431EAE0",
+            "trace": [
+              "Function.addPermission (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:32:9)",
+              "LambdaIntegration.bind (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:33:22)",
+              "new Method (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/method.js:33:40)",
+              "RootResource.addMethod (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:18:16)",
+              "new RestApiStack (/home/ubuntu/8th-final-infra-1team/infra-dist/restapi-stack.js:27:14)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:9:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/WaniSampleRestApiStack/SampleRestApi/Default/GET/ApiPermission.Test.WaniSampleRestApiStackSampleRestApi7BFE3DD6.GET..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleRestApiGETApiPermissionTestWaniSampleRestApiStackSampleRestApi7BFE3DD6GETE213BB3E",
+            "trace": [
+              "Function.addPermission (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:32:9)",
+              "LambdaIntegration.bind (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:40:26)",
+              "new Method (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/method.js:33:40)",
+              "RootResource.addMethod (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:18:16)",
+              "new RestApiStack (/home/ubuntu/8th-final-infra-1team/infra-dist/restapi-stack.js:27:14)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:9:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/WaniSampleRestApiStack/SampleRestApi/Default/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleRestApiGET454B2031",
+            "trace": [
+              "new Method (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/method.js:49:26)",
+              "RootResource.addMethod (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:18:16)",
+              "new RestApiStack (/home/ubuntu/8th-final-infra-1team/infra-dist/restapi-stack.js:27:14)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:9:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/WaniSampleRestApiStack/HomeHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HomeHandlerServiceRoleF90FBF69",
+            "trace": [
+              "new Role (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-iam/lib/role.js:45:22)",
+              "new Function (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/function.js:65:35)",
+              "new RestApiStack (/home/ubuntu/8th-final-infra-1team/infra-dist/restapi-stack.js:27:68)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:9:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/WaniSampleRestApiStack/HomeHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HomeHandler01436A24",
+            "trace": [
+              "new Function (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/function.js:114:26)",
+              "new RestApiStack (/home/ubuntu/8th-final-infra-1team/infra-dist/restapi-stack.js:27:68)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:9:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/WaniSampleRestApiStack/AssetParameters/03c3b888bb37fa35bb43c35097eca2d96dc46414d3d13f05862662b0cd2c0308/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters03c3b888bb37fa35bb43c35097eca2d96dc46414d3d13f05862662b0cd2c0308S3Bucket0CBF156A",
+            "trace": [
+              "new FileAssetParameters (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:129:22)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:25)",
+              "RestApiStack.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack.js:367:33)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:66:31)",
+              "new Asset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/function.js:83:33)",
+              "new RestApiStack (/home/ubuntu/8th-final-infra-1team/infra-dist/restapi-stack.js:27:68)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:9:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/WaniSampleRestApiStack/AssetParameters/03c3b888bb37fa35bb43c35097eca2d96dc46414d3d13f05862662b0cd2c0308/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters03c3b888bb37fa35bb43c35097eca2d96dc46414d3d13f05862662b0cd2c0308S3VersionKey59CA7029",
+            "trace": [
+              "new FileAssetParameters (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:129:22)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:25)",
+              "RestApiStack.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack.js:367:33)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:66:31)",
+              "new Asset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/function.js:83:33)",
+              "new RestApiStack (/home/ubuntu/8th-final-infra-1team/infra-dist/restapi-stack.js:27:68)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:9:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/WaniSampleRestApiStack/AssetParameters/03c3b888bb37fa35bb43c35097eca2d96dc46414d3d13f05862662b0cd2c0308/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters03c3b888bb37fa35bb43c35097eca2d96dc46414d3d13f05862662b0cd2c0308ArtifactHash0CC96425",
+            "trace": [
+              "new FileAssetParameters (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:129:22)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:62:25)",
+              "RestApiStack.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack.js:367:33)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:66:31)",
+              "new Asset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:36:44)",
+              "AssetCode.bind (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/code.js:137:26)",
+              "new Function (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/function.js:83:33)",
+              "new RestApiStack (/home/ubuntu/8th-final-infra-1team/infra-dist/restapi-stack.js:27:68)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:9:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/WaniSampleRestApiStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:127:9",
+              "visit (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "visit (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:178:9)",
+              "injectMetadataResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:116:5)",
+              "Object.synthesize (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stage.js:77:41)",
+              "process.<anonymous> (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/app.js:54:51)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)"
+            ]
+          }
+        ],
+        "/WaniSampleRestApiStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:127:9",
+              "visit (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "visit (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:178:9)",
+              "injectMetadataResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:116:5)",
+              "Object.synthesize (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stage.js:77:41)",
+              "process.<anonymous> (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/app.js:54:51)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
