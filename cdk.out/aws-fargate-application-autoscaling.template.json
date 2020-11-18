@@ -1,0 +1,823 @@
+{
+  "Resources": {
+    "fargateserviceautoscalingD107CF93": {
+      "Type": "AWS::ECS::Cluster",
+      "Properties": {
+        "ClusterName": "fragraph-cluster"
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-fargate-application-autoscaling/fargate-service-autoscaling/Resource"
+      }
+    },
+    "ecrrepository892B51BD": {
+      "Type": "AWS::ECR::Repository",
+      "Properties": {
+        "RepositoryName": "fragraph-ecr"
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "aws-fargate-application-autoscaling/ecr-repository/Resource"
+      }
+    },
+    "ecrrepositoryImageScanOnPushCustomResourcePolicyB34470D0": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "ecr:PutImageScanningConfiguration",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "ecrrepository892B51BD",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "ecrrepositoryImageScanOnPushCustomResourcePolicyB34470D0",
+        "Roles": [
+          {
+            "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-fargate-application-autoscaling/ecr-repository/ImageScanOnPush/CustomResourcePolicy/Resource"
+      }
+    },
+    "ecrrepositoryImageScanOnPush973435E3": {
+      "Type": "Custom::ECRImageScanOnPush",
+      "Properties": {
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "AWS679f53fac002430cb0da5b7982bd22872D164C4C",
+            "Arn"
+          ]
+        },
+        "Create": {
+          "service": "ECR",
+          "action": "putImageScanningConfiguration",
+          "parameters": {
+            "repositoryName": {
+              "Ref": "ecrrepository892B51BD"
+            },
+            "imageScanningConfiguration": {
+              "scanOnPush": "TRUE:BOOLEAN"
+            }
+          },
+          "physicalResourceId": {
+            "id": {
+              "Fn::GetAtt": [
+                "ecrrepository892B51BD",
+                "Arn"
+              ]
+            }
+          }
+        },
+        "Update": {
+          "service": "ECR",
+          "action": "putImageScanningConfiguration",
+          "parameters": {
+            "repositoryName": {
+              "Ref": "ecrrepository892B51BD"
+            },
+            "imageScanningConfiguration": {
+              "scanOnPush": "TRUE:BOOLEAN"
+            }
+          },
+          "physicalResourceId": {
+            "id": {
+              "Fn::GetAtt": [
+                "ecrrepository892B51BD",
+                "Arn"
+              ]
+            }
+          }
+        },
+        "Delete": {
+          "service": "ECR",
+          "action": "putImageScanningConfiguration",
+          "parameters": {
+            "repositoryName": {
+              "Ref": "ecrrepository892B51BD"
+            },
+            "imageScanningConfiguration": {
+              "scanOnPush": "FALSE:BOOLEAN"
+            }
+          },
+          "physicalResourceId": {
+            "id": {
+              "Fn::GetAtt": [
+                "ecrrepository892B51BD",
+                "Arn"
+              ]
+            }
+          }
+        },
+        "InstallLatestAwsSdk": true
+      },
+      "DependsOn": [
+        "ecrrepositoryImageScanOnPushCustomResourcePolicyB34470D0"
+      ],
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "aws-fargate-application-autoscaling/ecr-repository/ImageScanOnPush/Resource/Default"
+      }
+    },
+    "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-fargate-application-autoscaling/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/Resource"
+      }
+    },
+    "AWS679f53fac002430cb0da5b7982bd22872D164C4C": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956S3Bucket72B03BC9"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956S3VersionKey520B7554"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956S3VersionKey520B7554"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "index.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs12.x",
+        "Timeout": 120
+      },
+      "DependsOn": [
+        "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "aws-fargate-application-autoscaling/AWS679f53fac002430cb0da5b7982bd2287/Resource",
+        "aws:asset:path": "asset.4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956",
+        "aws:asset:property": "Code"
+      }
+    },
+    "fragraphLB511680B1": {
+      "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "Properties": {
+        "LoadBalancerAttributes": [
+          {
+            "Key": "deletion_protection.enabled",
+            "Value": "false"
+          }
+        ],
+        "Scheme": "internet-facing",
+        "Subnets": [
+          {
+            "Fn::ImportValue": "VpcStack:ExportsOutputRefVpcPublicSubnet1Subnet5C2D37C4FFA2B456"
+          },
+          {
+            "Fn::ImportValue": "VpcStack:ExportsOutputRefVpcPublicSubnet2Subnet691E08A351552740"
+          }
+        ],
+        "Type": "network"
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-fargate-application-autoscaling/fragraph/LB/Resource"
+      }
+    },
+    "fragraphLBPublicListener91939E72": {
+      "Type": "AWS::ElasticLoadBalancingV2::Listener",
+      "Properties": {
+        "DefaultActions": [
+          {
+            "TargetGroupArn": {
+              "Ref": "fragraphLBPublicListenerECSGroup18D6C1D8"
+            },
+            "Type": "forward"
+          }
+        ],
+        "LoadBalancerArn": {
+          "Ref": "fragraphLB511680B1"
+        },
+        "Port": 80,
+        "Protocol": "TCP"
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-fargate-application-autoscaling/fragraph/LB/PublicListener/Resource"
+      }
+    },
+    "fragraphLBPublicListenerECSGroup18D6C1D8": {
+      "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "Properties": {
+        "Port": 80,
+        "Protocol": "TCP",
+        "TargetType": "ip",
+        "VpcId": {
+          "Fn::ImportValue": "VpcStack:ExportsOutputRefVpc8378EB38272D6E3A"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-fargate-application-autoscaling/fragraph/LB/PublicListener/ECSGroup/Resource"
+      }
+    },
+    "fragraphTaskDefTaskRole23435263": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ecs-tasks.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-fargate-application-autoscaling/fragraph/TaskDef/TaskRole/Resource"
+      }
+    },
+    "fragraphTaskDef8ED2F7EC": {
+      "Type": "AWS::ECS::TaskDefinition",
+      "Properties": {
+        "ContainerDefinitions": [
+          {
+            "Environment": [
+              {
+                "Name": "DB_DEFAULT_USERNAME",
+                "Value": {
+                  "Ref": "SsmParameterValuefragraphdatabaseidC96584B6F00A464EAD1953AFF4B05118Parameter"
+                }
+              },
+              {
+                "Name": "DB_DEFAULT_PASSWORD",
+                "Value": {
+                  "Ref": "SsmParameterValuefragraphdatabasepwC96584B6F00A464EAD1953AFF4B05118Parameter"
+                }
+              },
+              {
+                "Name": "DB_DEFAULT_HOST",
+                "Value": {
+                  "Ref": "SsmParameterValuefragraphdatabasehostC96584B6F00A464EAD1953AFF4B05118Parameter"
+                }
+              }
+            ],
+            "Essential": true,
+            "Image": {
+              "Fn::Join": [
+                "",
+                [
+                  {
+                    "Fn::Select": [
+                      4,
+                      {
+                        "Fn::Split": [
+                          ":",
+                          {
+                            "Fn::GetAtt": [
+                              "ecrrepository892B51BD",
+                              "Arn"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  ".dkr.ecr.",
+                  {
+                    "Fn::Select": [
+                      3,
+                      {
+                        "Fn::Split": [
+                          ":",
+                          {
+                            "Fn::GetAtt": [
+                              "ecrrepository892B51BD",
+                              "Arn"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  ".",
+                  {
+                    "Ref": "AWS::URLSuffix"
+                  },
+                  "/",
+                  {
+                    "Ref": "ecrrepository892B51BD"
+                  },
+                  ":latest"
+                ]
+              ]
+            },
+            "LogConfiguration": {
+              "LogDriver": "awslogs",
+              "Options": {
+                "awslogs-group": {
+                  "Ref": "fragraphTaskDeffragraphLogGroup16F96D2D"
+                },
+                "awslogs-stream-prefix": "fragraph",
+                "awslogs-region": {
+                  "Ref": "AWS::Region"
+                }
+              }
+            },
+            "Name": "fragraph",
+            "PortMappings": [
+              {
+                "ContainerPort": 80,
+                "Protocol": "tcp"
+              }
+            ]
+          }
+        ],
+        "Cpu": "256",
+        "ExecutionRoleArn": {
+          "Fn::GetAtt": [
+            "fragraphTaskDefExecutionRoleCA44645A",
+            "Arn"
+          ]
+        },
+        "Family": "fragraph",
+        "Memory": "512",
+        "NetworkMode": "awsvpc",
+        "RequiresCompatibilities": [
+          "FARGATE"
+        ],
+        "TaskRoleArn": {
+          "Fn::GetAtt": [
+            "fragraphTaskDefTaskRole23435263",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-fargate-application-autoscaling/fragraph/TaskDef/Resource"
+      }
+    },
+    "fragraphTaskDeffragraphLogGroup16F96D2D": {
+      "Type": "AWS::Logs::LogGroup",
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "aws-fargate-application-autoscaling/fragraph/TaskDef/fragraph/LogGroup/Resource"
+      }
+    },
+    "fragraphTaskDefExecutionRoleCA44645A": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ecs-tasks.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/AmazonEC2ContainerRegistryPowerUser"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-fargate-application-autoscaling/fragraph/TaskDef/ExecutionRole/Resource"
+      }
+    },
+    "fragraphTaskDefExecutionRoleDefaultPolicy4C7739F4": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "ecrrepository892B51BD",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "ecr:GetAuthorizationToken",
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "fragraphTaskDeffragraphLogGroup16F96D2D",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "fragraphTaskDefExecutionRoleDefaultPolicy4C7739F4",
+        "Roles": [
+          {
+            "Ref": "fragraphTaskDefExecutionRoleCA44645A"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-fargate-application-autoscaling/fragraph/TaskDef/ExecutionRole/DefaultPolicy/Resource"
+      }
+    },
+    "fragraphServiceFE25E6E7": {
+      "Type": "AWS::ECS::Service",
+      "Properties": {
+        "Cluster": {
+          "Ref": "fargateserviceautoscalingD107CF93"
+        },
+        "DeploymentConfiguration": {
+          "MaximumPercent": 200,
+          "MinimumHealthyPercent": 50
+        },
+        "DesiredCount": 1,
+        "EnableECSManagedTags": false,
+        "HealthCheckGracePeriodSeconds": 60,
+        "LaunchType": "FARGATE",
+        "LoadBalancers": [
+          {
+            "ContainerName": "fragraph",
+            "ContainerPort": 80,
+            "TargetGroupArn": {
+              "Ref": "fragraphLBPublicListenerECSGroup18D6C1D8"
+            }
+          }
+        ],
+        "NetworkConfiguration": {
+          "AwsvpcConfiguration": {
+            "AssignPublicIp": "ENABLED",
+            "SecurityGroups": [
+              {
+                "Fn::GetAtt": [
+                  "fragraphServiceSecurityGroup033CE2A4",
+                  "GroupId"
+                ]
+              }
+            ],
+            "Subnets": [
+              {
+                "Fn::ImportValue": "VpcStack:ExportsOutputRefVpcPublicSubnet1Subnet5C2D37C4FFA2B456"
+              },
+              {
+                "Fn::ImportValue": "VpcStack:ExportsOutputRefVpcPublicSubnet2Subnet691E08A351552740"
+              }
+            ]
+          }
+        },
+        "ServiceName": "fragraph",
+        "TaskDefinition": {
+          "Ref": "fragraphTaskDef8ED2F7EC"
+        }
+      },
+      "DependsOn": [
+        "fragraphLBPublicListenerECSGroup18D6C1D8",
+        "fragraphLBPublicListener91939E72"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "aws-fargate-application-autoscaling/fragraph/Service/Service"
+      }
+    },
+    "fragraphServiceSecurityGroup033CE2A4": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "aws-fargate-application-autoscaling/fragraph/Service/SecurityGroup",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "VpcId": {
+          "Fn::ImportValue": "VpcStack:ExportsOutputRefVpc8378EB38272D6E3A"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-fargate-application-autoscaling/fragraph/Service/SecurityGroup/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Modules": "aws-cdk=1.74.0,@aws-cdk/assets=1.71.0,@aws-cdk/aws-applicationautoscaling=1.68.0,@aws-cdk/aws-autoscaling=1.68.0,@aws-cdk/aws-autoscaling-common=1.68.0,@aws-cdk/aws-autoscaling-hooktargets=1.68.0,@aws-cdk/aws-certificatemanager=1.68.0,@aws-cdk/aws-cloudwatch=1.71.0,@aws-cdk/aws-codeguruprofiler=1.68.0,@aws-cdk/aws-ec2=1.71.0,@aws-cdk/aws-ecr=1.68.0,@aws-cdk/aws-ecr-assets=1.68.0,@aws-cdk/aws-ecs=1.68.0,@aws-cdk/aws-ecs-patterns=1.68.0,@aws-cdk/aws-elasticloadbalancingv2=1.68.0,@aws-cdk/aws-events=1.71.0,@aws-cdk/aws-events-targets=1.68.0,@aws-cdk/aws-iam=1.71.0,@aws-cdk/aws-kms=1.71.0,@aws-cdk/aws-lambda=1.68.0,@aws-cdk/aws-logs=1.71.0,@aws-cdk/aws-route53=1.68.0,@aws-cdk/aws-route53-targets=1.68.0,@aws-cdk/aws-s3=1.71.0,@aws-cdk/aws-s3-assets=1.71.0,@aws-cdk/aws-servicediscovery=1.68.0,@aws-cdk/aws-sns=1.68.0,@aws-cdk/aws-sns-subscriptions=1.68.0,@aws-cdk/aws-sqs=1.68.0,@aws-cdk/aws-ssm=1.71.0,@aws-cdk/cloud-assembly-schema=1.71.0,@aws-cdk/core=1.71.0,@aws-cdk/custom-resources=1.68.0,@aws-cdk/cx-api=1.71.0,@aws-cdk/region-info=1.71.0,jsii-runtime=node.js/v12.18.4"
+      },
+      "Metadata": {
+        "aws:cdk:path": "aws-fargate-application-autoscaling/CDKMetadata/Default"
+      },
+      "Condition": "CDKMetadataAvailable"
+    }
+  },
+  "Parameters": {
+    "AssetParameters4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956S3Bucket72B03BC9": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956\""
+    },
+    "AssetParameters4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956S3VersionKey520B7554": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956\""
+    },
+    "AssetParameters4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956ArtifactHashD15A2D11": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956\""
+    },
+    "SsmParameterValuefragraphdatabaseidC96584B6F00A464EAD1953AFF4B05118Parameter": {
+      "Type": "AWS::SSM::Parameter::Value<String>",
+      "Default": "/fragraph/database/id"
+    },
+    "SsmParameterValuefragraphdatabasepwC96584B6F00A464EAD1953AFF4B05118Parameter": {
+      "Type": "AWS::SSM::Parameter::Value<String>",
+      "Default": "/fragraph/database/pw"
+    },
+    "SsmParameterValuefragraphdatabasehostC96584B6F00A464EAD1953AFF4B05118Parameter": {
+      "Type": "AWS::SSM::Parameter::Value<String>",
+      "Default": "/fragraph/database/host"
+    }
+  },
+  "Outputs": {
+    "fragraphLoadBalancerDNS46B834FC": {
+      "Value": {
+        "Fn::GetAtt": [
+          "fragraphLB511680B1",
+          "DNSName"
+        ]
+      }
+    },
+    "LoadBalancerDNS": {
+      "Value": {
+        "Fn::GetAtt": [
+          "fragraphLB511680B1",
+          "DNSName"
+        ]
+      }
+    }
+  },
+  "Conditions": {
+    "CDKMetadataAvailable": {
+      "Fn::Or": [
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ca-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-northwest-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-central-1"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-3"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "me-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "sa-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1273 @@
+{
+  "version": "6.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "VpcStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "VpcStack.template.json"
+      },
+      "metadata": {
+        "/VpcStack/Vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Vpc8378EB38",
+            "trace": [
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:309:25)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1Subnet5C2D37C4",
+            "trace": [
+              "new Subnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:609:24)",
+              "new PublicSubnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:763:9)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:518:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:502:32)",
+              "Vpc.createSubnets (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:493:18)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:330:14)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1RouteTable6C95E38E",
+            "trace": [
+              "new Subnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:624:23)",
+              "new PublicSubnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:763:9)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:518:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:502:32)",
+              "Vpc.createSubnets (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:493:18)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:330:14)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1RouteTableAssociation97140677",
+            "trace": [
+              "new Subnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:629:9)",
+              "new PublicSubnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:763:9)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:518:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:502:32)",
+              "Vpc.createSubnets (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:493:18)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:330:14)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1DefaultRoute3DA9E72A",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:661:23)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:342:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:341:32)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1EIPD7E02669",
+            "trace": [
+              "PublicSubnet.addNatGateway (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:776:27)",
+              "NatGatewayProvider.configureNat (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/nat.js:59:33)",
+              "Vpc.createNatGateways (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:476:18)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:347:22)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1NATGateway4D7517AA",
+            "trace": [
+              "PublicSubnet.addNatGateway (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:774:21)",
+              "NatGatewayProvider.configureNat (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/nat.js:59:33)",
+              "Vpc.createNatGateways (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:476:18)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:347:22)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet2Subnet691E08A3",
+            "trace": [
+              "new Subnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:609:24)",
+              "new PublicSubnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:763:9)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:518:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:502:32)",
+              "Vpc.createSubnets (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:493:18)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:330:14)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet2RouteTable94F7E489",
+            "trace": [
+              "new Subnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:624:23)",
+              "new PublicSubnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:763:9)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:518:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:502:32)",
+              "Vpc.createSubnets (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:493:18)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:330:14)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet2RouteTableAssociationDD5762D8",
+            "trace": [
+              "new Subnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:629:9)",
+              "new PublicSubnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:763:9)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:518:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:502:32)",
+              "Vpc.createSubnets (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:493:18)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:330:14)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet2DefaultRoute97F91067",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:661:23)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:342:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:341:32)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1Subnet536B997A",
+            "trace": [
+              "new Subnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:609:24)",
+              "new PrivateSubnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:798:9)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:523:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:502:32)",
+              "Vpc.createSubnets (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:493:18)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:330:14)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1RouteTableB2C5B500",
+            "trace": [
+              "new Subnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:624:23)",
+              "new PrivateSubnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:798:9)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:523:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:502:32)",
+              "Vpc.createSubnets (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:493:18)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:330:14)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1RouteTableAssociation70C59FA6",
+            "trace": [
+              "new Subnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:629:9)",
+              "new PrivateSubnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:798:9)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:523:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:502:32)",
+              "Vpc.createSubnets (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:493:18)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:330:14)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1DefaultRouteBE02A9ED",
+            "trace": [
+              "PrivateSubnet.addRoute (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:703:23)",
+              "NatGatewayProvider.configureSubnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/nat.js:70:16)",
+              "NatGatewayProvider.configureNat (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/nat.js:64:18)",
+              "Vpc.createNatGateways (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:476:18)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:347:22)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet2Subnet3788AAA1",
+            "trace": [
+              "new Subnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:609:24)",
+              "new PrivateSubnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:798:9)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:523:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:502:32)",
+              "Vpc.createSubnets (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:493:18)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:330:14)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet2RouteTableA678073B",
+            "trace": [
+              "new Subnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:624:23)",
+              "new PrivateSubnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:798:9)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:523:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:502:32)",
+              "Vpc.createSubnets (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:493:18)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:330:14)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet2RouteTableAssociationA89CAD56",
+            "trace": [
+              "new Subnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:629:9)",
+              "new PrivateSubnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:798:9)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:523:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:502:32)",
+              "Vpc.createSubnets (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:493:18)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:330:14)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet2DefaultRoute060D2087",
+            "trace": [
+              "PrivateSubnet.addRoute (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:703:23)",
+              "NatGatewayProvider.configureSubnet (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/nat.js:70:16)",
+              "NatGatewayProvider.configureNat (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/nat.js:64:18)",
+              "Vpc.createNatGateways (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:476:18)",
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:347:22)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcIGWD7BA715C",
+            "trace": [
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:334:25)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcVPCGWBF912B6E",
+            "trace": [
+              "new Vpc (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:337:25)",
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:39:17)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/vpcId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcId",
+            "trace": [
+              "new VpcStack (/home/ubuntu/8th-final-infra-1team/infra-dist/vpc-stack.js:48:5)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:17:13)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:127:9",
+              "visit (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "visit (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:178:9)",
+              "injectMetadataResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:116:5)",
+              "Object.synthesize (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stage.js:82:41)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:22:5)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:127:9",
+              "visit (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "visit (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:178:9)",
+              "injectMetadataResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:116:5)",
+              "Object.synthesize (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stage.js:82:41)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:22:5)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Exports/Output{\"Ref\":\"Vpc8378EB38\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefVpc8378EB38272D6E3A",
+            "trace": [
+              "createImportValue (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/refs.js:156:9)",
+              "resolveValue (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/refs.js:88:12)",
+              "Object.resolveReferences (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/refs.js:29:30)",
+              "Object.prepareApp (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/prepare-app.js:34:16)",
+              "Object.synthesize (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:20:19)",
+              "App.synth (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stage.js:82:41)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:22:5)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Exports/Output{\"Ref\":\"VpcPublicSubnet1Subnet5C2D37C4\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefVpcPublicSubnet1Subnet5C2D37C4FFA2B456",
+            "trace": [
+              "createImportValue (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/refs.js:156:9)",
+              "resolveValue (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/refs.js:88:12)",
+              "Object.resolveReferences (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/refs.js:29:30)",
+              "Object.prepareApp (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/prepare-app.js:34:16)",
+              "Object.synthesize (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:20:19)",
+              "App.synth (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stage.js:82:41)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:22:5)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/VpcStack/Exports/Output{\"Ref\":\"VpcPublicSubnet2Subnet691E08A3\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefVpcPublicSubnet2Subnet691E08A351552740",
+            "trace": [
+              "createImportValue (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/refs.js:156:9)",
+              "resolveValue (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/refs.js:88:12)",
+              "Object.resolveReferences (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/refs.js:29:30)",
+              "Object.prepareApp (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/prepare-app.js:34:16)",
+              "Object.synthesize (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:20:19)",
+              "App.synth (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stage.js:82:41)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:22:5)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ]
+      }
+    },
+    "SecurityGroupStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "SecurityGroupStack.template.json"
+      },
+      "dependencies": [
+        "VpcStack"
+      ],
+      "metadata": {
+        "/SecurityGroupStack/ingress-security-group/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ingresssecuritygroup39BFA35C",
+            "trace": [
+              "new SecurityGroup (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:192:30)",
+              "new SecurityGroupStack (/home/ubuntu/8th-final-infra-1team/infra-dist/sg-stack.js:30:14)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:18:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/SecurityGroupStack/SecurityGroup": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityGroup",
+            "trace": [
+              "new SecurityGroupStack (/home/ubuntu/8th-final-infra-1team/infra-dist/sg-stack.js:48:5)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:18:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/SecurityGroupStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:127:9",
+              "visit (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "visit (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:178:9)",
+              "injectMetadataResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:116:5)",
+              "Object.synthesize (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stage.js:82:41)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:22:5)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/SecurityGroupStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:127:9",
+              "visit (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "visit (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:178:9)",
+              "injectMetadataResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:116:5)",
+              "Object.synthesize (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stage.js:82:41)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:22:5)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ]
+      }
+    },
+    "aws-fargate-application-autoscaling": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "aws-fargate-application-autoscaling.template.json"
+      },
+      "dependencies": [
+        "SecurityGroupStack",
+        "VpcStack"
+      ],
+      "metadata": {
+        "/aws-fargate-application-autoscaling": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956",
+              "id": "4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956",
+              "packaging": "zip",
+              "sourceHash": "4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956",
+              "s3BucketParameter": "AssetParameters4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956S3Bucket72B03BC9",
+              "s3KeyParameter": "AssetParameters4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956S3VersionKey520B7554",
+              "artifactHashParameter": "AssetParameters4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956ArtifactHashD15A2D11"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/construct-compat.js:336:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:154:29)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:72:25)",
+              "FargateStack.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack.js:363:33)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:76:31)",
+              "new Asset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:40:44)",
+              "AssetCode.bind (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/code.js:165:26)",
+              "new Function (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/function.js:84:33)",
+              "SingletonFunction.ensureLambda (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:76:16)",
+              "new SingletonFunction (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:23:36)",
+              "new AwsCustomResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/custom-resources/lib/aws-custom-resource/aws-custom-resource.js:125:26)",
+              "new Repository (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecr/lib/repository.js:180:13)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:44:27)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/fargate-service-autoscaling/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "fargateserviceautoscalingD107CF93",
+            "trace": [
+              "new Cluster (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/cluster.js:42:25)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:39:21)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/ecr-repository/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecrrepository892B51BD",
+            "trace": [
+              "new Repository (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecr/lib/repository.js:161:26)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:44:27)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/ecr-repository/ImageScanOnPush/CustomResourcePolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecrrepositoryImageScanOnPushCustomResourcePolicyB34470D0",
+            "trace": [
+              "new Policy (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-iam/lib/policy.js:46:26)",
+              "new AwsCustomResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/custom-resources/lib/aws-custom-resource/aws-custom-resource.js:157:24)",
+              "new Repository (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecr/lib/repository.js:180:13)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:44:27)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/ecr-repository/ImageScanOnPush/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecrrepositoryImageScanOnPush973435E3",
+            "trace": [
+              "new CustomResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/custom-resource.js:27:25)",
+              "new AwsCustomResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/custom-resources/lib/aws-custom-resource/aws-custom-resource.js:164:31)",
+              "new Repository (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecr/lib/repository.js:180:13)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:44:27)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
+            "trace": [
+              "new Role (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-iam/lib/role.js:62:22)",
+              "new Function (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/function.js:66:35)",
+              "SingletonFunction.ensureLambda (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:76:16)",
+              "new SingletonFunction (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:23:36)",
+              "new AwsCustomResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/custom-resources/lib/aws-custom-resource/aws-custom-resource.js:125:26)",
+              "new Repository (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecr/lib/repository.js:180:13)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:44:27)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/AWS679f53fac002430cb0da5b7982bd2287/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWS679f53fac002430cb0da5b7982bd22872D164C4C",
+            "trace": [
+              "new Function (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/function.js:115:26)",
+              "SingletonFunction.ensureLambda (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:76:16)",
+              "new SingletonFunction (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:23:36)",
+              "new AwsCustomResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/custom-resources/lib/aws-custom-resource/aws-custom-resource.js:125:26)",
+              "new Repository (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecr/lib/repository.js:180:13)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:44:27)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/AssetParameters/4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956S3Bucket72B03BC9",
+            "trace": [
+              "new FileAssetParameters (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:144:22)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:72:25)",
+              "FargateStack.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack.js:363:33)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:76:31)",
+              "new Asset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:40:44)",
+              "AssetCode.bind (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/code.js:165:26)",
+              "new Function (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/function.js:84:33)",
+              "SingletonFunction.ensureLambda (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:76:16)",
+              "new SingletonFunction (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:23:36)",
+              "new AwsCustomResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/custom-resources/lib/aws-custom-resource/aws-custom-resource.js:125:26)",
+              "new Repository (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecr/lib/repository.js:180:13)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:44:27)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/AssetParameters/4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956S3VersionKey520B7554",
+            "trace": [
+              "new FileAssetParameters (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:144:22)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:72:25)",
+              "FargateStack.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack.js:363:33)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:76:31)",
+              "new Asset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:40:44)",
+              "AssetCode.bind (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/code.js:165:26)",
+              "new Function (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/function.js:84:33)",
+              "SingletonFunction.ensureLambda (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:76:16)",
+              "new SingletonFunction (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:23:36)",
+              "new AwsCustomResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/custom-resources/lib/aws-custom-resource/aws-custom-resource.js:125:26)",
+              "new Repository (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecr/lib/repository.js:180:13)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:44:27)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/AssetParameters/4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters4a3609ad912843e581892f37ae9d6fb0fa1648b547693aaa562b0119452b8956ArtifactHashD15A2D11",
+            "trace": [
+              "new FileAssetParameters (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:144:22)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:72:25)",
+              "FargateStack.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack.js:363:33)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:76:31)",
+              "new Asset (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:40:44)",
+              "AssetCode.bind (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/code.js:165:26)",
+              "new Function (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/function.js:84:33)",
+              "SingletonFunction.ensureLambda (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:76:16)",
+              "new SingletonFunction (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:23:36)",
+              "new AwsCustomResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/custom-resources/lib/aws-custom-resource/aws-custom-resource.js:125:26)",
+              "new Repository (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecr/lib/repository.js:180:13)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:44:27)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/SsmParameterValue:--fragraph--database--id:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValuefragraphdatabaseidC96584B6F00A464EAD1953AFF4B05118Parameter",
+            "trace": [
+              "Function.fromStringParameterAttributes (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:119:15)",
+              "Function.valueForTypedStringParameter (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:187:21)",
+              "Function.valueForStringParameter (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:170:32)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:50:42)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/SsmParameterValue:--fragraph--database--pw:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValuefragraphdatabasepwC96584B6F00A464EAD1953AFF4B05118Parameter",
+            "trace": [
+              "Function.fromStringParameterAttributes (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:119:15)",
+              "Function.valueForTypedStringParameter (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:187:21)",
+              "Function.valueForStringParameter (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:170:32)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:51:42)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/SsmParameterValue:--fragraph--database--host:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValuefragraphdatabasehostC96584B6F00A464EAD1953AFF4B05118Parameter",
+            "trace": [
+              "Function.fromStringParameterAttributes (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:119:15)",
+              "Function.valueForTypedStringParameter (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:187:21)",
+              "Function.valueForStringParameter (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:170:32)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:52:38)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/fragraph/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "fragraphLB511680B1",
+            "trace": [
+              "new BaseLoadBalancer (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-load-balancer.js:29:26)",
+              "new NetworkLoadBalancer (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/nlb/network-load-balancer.js:52:9)",
+              "new NetworkLoadBalancedServiceBase (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/network-load-balanced-service-base.js:32:13)",
+              "new NetworkLoadBalancedFargateService (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/network-load-balanced-fargate-service.js:14:9)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:54:28)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/fragraph/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "fragraphLBPublicListener91939E72",
+            "trace": [
+              "new BaseListener (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-listener.js:15:26)",
+              "new NetworkListener (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/nlb/network-listener.js:29:9)",
+              "NetworkLoadBalancer.addListener (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/nlb/network-load-balancer.js:65:16)",
+              "new NetworkLoadBalancedServiceBase (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/network-load-balanced-service-base.js:37:38)",
+              "new NetworkLoadBalancedFargateService (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/network-load-balanced-fargate-service.js:14:9)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:54:28)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/fragraph/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "fragraphLBPublicListenerECSGroup18D6C1D8",
+            "trace": [
+              "new TargetGroupBase (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-target-group.js:35:25)",
+              "new NetworkTargetGroup (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/nlb/network-target-group.js:20:9)",
+              "NetworkListener.addTargets (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/nlb/network-listener.js:99:23)",
+              "new NetworkLoadBalancedServiceBase (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/network-load-balanced-service-base.js:38:42)",
+              "new NetworkLoadBalancedFargateService (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/network-load-balanced-fargate-service.js:14:9)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:54:28)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/fragraph/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "fragraphLoadBalancerDNS46B834FC",
+            "trace": [
+              "new NetworkLoadBalancedServiceBase (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/network-load-balanced-service-base.js:53:13)",
+              "new NetworkLoadBalancedFargateService (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/network-load-balanced-fargate-service.js:14:9)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:54:28)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/fragraph/TaskDef/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "fragraphTaskDefTaskRole23435263",
+            "trace": [
+              "new Role (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-iam/lib/role.js:62:22)",
+              "new TaskDefinition (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.js:66:43)",
+              "new FargateTaskDefinition (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-task-definition.js:19:9)",
+              "new NetworkLoadBalancedFargateService (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/network-load-balanced-fargate-service.js:24:35)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:54:28)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/fragraph/TaskDef/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "fragraphTaskDef8ED2F7EC",
+            "trace": [
+              "new TaskDefinition (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.js:69:25)",
+              "new FargateTaskDefinition (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-task-definition.js:19:9)",
+              "new NetworkLoadBalancedFargateService (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/network-load-balanced-fargate-service.js:24:35)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:54:28)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/fragraph/TaskDef/fragraph/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "fragraphTaskDeffragraphLogGroup16F96D2D",
+            "trace": [
+              "new LogGroup (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-logs/lib/log-group.js:141:26)",
+              "AwsLogDriver.bind (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/log-drivers/aws-log-driver.js:28:48)",
+              "new ContainerDefinition (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/container-definition.js:83:50)",
+              "FargateTaskDefinition.addContainer (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.js:191:16)",
+              "new NetworkLoadBalancedFargateService (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/network-load-balanced-fargate-service.js:37:51)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:54:28)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/fragraph/TaskDef/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "fragraphTaskDefExecutionRoleCA44645A",
+            "trace": [
+              "new Role (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-iam/lib/role.js:62:22)",
+              "FargateTaskDefinition.obtainExecutionRole (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.js:242:35)",
+              "EcrImage.bind (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/images/ecr.js:22:70)",
+              "new ContainerDefinition (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/container-definition.js:81:40)",
+              "FargateTaskDefinition.addContainer (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.js:191:16)",
+              "new NetworkLoadBalancedFargateService (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/network-load-balanced-fargate-service.js:37:51)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:54:28)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/fragraph/TaskDef/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "fragraphTaskDefExecutionRoleDefaultPolicy4C7739F4",
+            "trace": [
+              "new Policy (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-iam/lib/policy.js:46:26)",
+              "Role.addToPrincipalPolicy (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-iam/lib/role.js:193:34)",
+              "Function.addToPrincipal (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-iam/lib/grant.js:82:65)",
+              "Function.addToPrincipalOrResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-iam/lib/grant.js:39:30)",
+              "Repository.grant (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecr/lib/repository.js:119:26)",
+              "Repository.grantPull (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecr/lib/repository.js:131:26)",
+              "EcrImage.bind (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/images/ecr.js:22:25)",
+              "new ContainerDefinition (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/container-definition.js:81:40)",
+              "FargateTaskDefinition.addContainer (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.js:191:16)",
+              "new NetworkLoadBalancedFargateService (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/network-load-balanced-fargate-service.js:37:51)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:54:28)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/fragraph/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "fragraphServiceFE25E6E7",
+            "trace": [
+              "new BaseService (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:112:25)",
+              "new FargateService (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-service.js:48:9)",
+              "new NetworkLoadBalancedFargateService (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/network-load-balanced-fargate-service.js:50:24)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:54:28)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/fragraph/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "fragraphServiceSecurityGroup033CE2A4",
+            "trace": [
+              "new SecurityGroup (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:192:30)",
+              "FargateService.configureAwsVpcNetworkingWithSecurityGroups (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:366:31)",
+              "new FargateService (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-service.js:66:14)",
+              "new NetworkLoadBalancedFargateService (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/network-load-balanced-fargate-service.js:50:24)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:54:28)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LoadBalancerDNS",
+            "trace": [
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:78:5)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:127:9",
+              "visit (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "visit (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:178:9)",
+              "injectMetadataResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:116:5)",
+              "Object.synthesize (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stage.js:82:41)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:22:5)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/aws-fargate-application-autoscaling/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+              "/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:127:9",
+              "visit (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "visit (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:178:9)",
+              "injectMetadataResources (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:116:5)",
+              "Object.synthesize (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/home/ubuntu/8th-final-infra-1team/node_modules/@aws-cdk/core/lib/stage.js:82:41)",
+              "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:22:5)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

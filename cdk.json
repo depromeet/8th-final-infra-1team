@@ -1,0 +1,7 @@
+{
+  "app": "node infra-dist/entry",
+  "context": {
+    "@aws-cdk/core:enableStackNameDuplicates": "true",
+    "aws-cdk:enableDiffNoFail": "true"
+  }
+}
