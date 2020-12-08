@@ -24,6 +24,7 @@ export class FargateStack extends cdk.Stack {
 		 });
 
 		// Create a ECR
+		// const isEcrRepositoryExist = ecr.fromRepositoryName(this, 'ecr-repository', 'fragraph-ecr');
 		const ecrRepository = new ecr.Repository(this, 'ecr-repository', {
 			imageScanOnPush: true,
 			repositoryName: "fragraph-ecr"
@@ -38,12 +39,15 @@ export class FargateStack extends cdk.Stack {
 		
 		// Create Fargate Service
         const fargateService = new ecs_patterns.NetworkLoadBalancedFargateService(this, 'fragraph', {
-            cluster: cluster,
+            assignPublicIp: true,
+			listenerPort: 3000,
+			cluster: cluster,
             serviceName: "fragraph",
             taskImageOptions: {
                 image: ecs.ContainerImage.fromEcrRepository(ecrRepository),
 				containerName: "fragraph",
-                family: "fragraph",
+                containerPort: 3000,
+				family: "fragraph",
 				environment: {
 					DB_DEFAULT_USERNAME: userName,
 					DB_DEFAULT_PASSWORD: password,

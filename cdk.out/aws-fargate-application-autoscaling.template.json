@@ -261,7 +261,7 @@
         "LoadBalancerArn": {
           "Ref": "fragraphLB511680B1"
         },
-        "Port": 80,
+        "Port": 3000,
         "Protocol": "TCP"
       },
       "Metadata": {
@@ -392,7 +392,7 @@
             "Name": "fragraph",
             "PortMappings": [
               {
-                "ContainerPort": 80,
+                "ContainerPort": 3000,
                 "Protocol": "tcp"
               }
             ]
@@ -532,7 +532,7 @@
         "LoadBalancers": [
           {
             "ContainerName": "fragraph",
-            "ContainerPort": 80,
+            "ContainerPort": 3000,
             "TargetGroupArn": {
               "Ref": "fragraphLBPublicListenerECSGroup18D6C1D8"
             }
