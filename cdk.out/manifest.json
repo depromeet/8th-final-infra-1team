@@ -1212,7 +1212,7 @@
             "type": "aws:cdk:logicalId",
             "data": "LoadBalancerDNS",
             "trace": [
-              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:78:5)",
+              "new FargateStack (/home/ubuntu/8th-final-infra-1team/infra-dist/fargate-stack.js:81:5)",
               "Object.<anonymous> (/home/ubuntu/8th-final-infra-1team/infra-dist/entry.js:20:12)",
               "Module._compile (internal/modules/cjs/loader.js:1137:30)",
               "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",

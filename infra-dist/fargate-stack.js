@@ -52,11 +52,14 @@ class FargateStack extends cdk.Stack {
     const host = ssm.StringParameter.valueForStringParameter(this, "/fragraph/database/host"); // Create Fargate Service
 
     const fargateService = new ecs_patterns.NetworkLoadBalancedFargateService(this, 'fragraph', {
+      assignPublicIp: true,
+      listenerPort: 3000,
       cluster: cluster,
       serviceName: "fragraph",
       taskImageOptions: {
         image: ecs.ContainerImage.fromEcrRepository(ecrRepository),
         containerName: "fragraph",
+        containerPort: 3000,
         family: "fragraph",
         environment: {
           DB_DEFAULT_USERNAME: userName,
